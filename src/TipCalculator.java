@@ -9,10 +9,13 @@ public class TipCalculator {
         System.out.print("What's the tip percentage? (0-100):");
         int tipPercent = scan.nextInt();
         scan.nextLine();
-        int cost = 0;
+        double totalCost = 0;
+        double cost = 0;
         while (cost != -1) {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
-            cost = scan.nextInt();
+            cost = scan.nextDouble();
+            scan.nextLine();
+            totalCost += cost;
         }
 
     }
