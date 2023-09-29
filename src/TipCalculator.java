@@ -17,17 +17,26 @@ public class TipCalculator {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             cost = scan.nextDouble();
             scan.nextLine();
+            System.out.println("enter the ");
             if (cost != -1) {
-                totalCost += cost;
+            totalCost += cost;
             }
         }
 
         double costWithTip = tipPercent * totalCost + totalCost;
         System.out.println("----------------------------------");
-        System.out.println("Total bill before tip: " + totalCost);
+        System.out.println("Total bill before tip: $" + totalCost);
         System.out.println("Total percentage : " + tipPercent * 100 + "%");
         System.out.println("Total tip: $" + tipPercent * totalCost);
         System.out.println("Total bill with tip : $" + costWithTip);
-
+        System.out.println("Per person cost before tip : $" + totalCost/ people);
+        System.out.println("Tip per person: $" + tipPercent * totalCost / people);
+        System.out.println("Total cost per person: $" + (tipPercent * totalCost / people + totalCost / people));
+        System.out.println("----------------------------------");
+        System.out.println("Items ordered: ");
+        while (items != 0) {
+            System.out.println(item);
+            items--;
+        }
     }
 }
